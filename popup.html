@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: -apple-system, system-ui, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 14px 16px;
+      width: 280px;
+      color: #1f1f1f;
+      background: #fff;
+    }
+    h1 { font-size: 14px; margin: 0 0 12px; font-weight: 600; }
+    label { display: block; font-size: 12px; margin: 10px 0 4px; color: #444; }
+    select {
+      width: 100%;
+      font-size: 13px;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .check { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12px; }
+    .hint { color: #666; font-size: 11px; margin-top: 4px; line-height: 1.4; }
+    .saved { color: #2a8a2a; font-size: 11px; height: 14px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>BU Mail Auto-Select</h1>
+
+  <label for="server">Default server</label>
+  <select id="server">
+    <option value="personel">Personel (@bogazici.edu.tr)</option>
+    <option value="student">Öğrenci (@std.bogazici.edu.tr)</option>
+    <option value="pt">Yarızamanlı (@pt.bogazici.edu.tr)</option>
+    <option value="emekli">Emekli (@retired.bogazici.edu.tr)</option>
+  </select>
+
+  <label class="check">
+    <input type="checkbox" id="autoSubmit">
+    <span>Auto Login</span>
+  </label>
+  <div class="saved" id="saved"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

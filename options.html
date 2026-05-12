@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BU Mail Auto-Select — Options</title>
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; padding: 18px; min-width: 320px; color: #222; }
+    h1 { font-size: 16px; margin: 0 0 14px; }
+    label { display: block; margin: 10px 0 4px; font-size: 13px; }
+    select, input[type=checkbox] { font-size: 13px; }
+    .row { margin-bottom: 14px; }
+    .hint { color: #666; font-size: 11px; margin-top: 4px; }
+    .saved { color: #2a8a2a; font-size: 12px; height: 16px; }
+  </style>
+</head>
+<body>
+  <h1>BU Mail Auto-Select</h1>
+
+  <div class="row">
+    <label for="server">Default server</label>
+    <select id="server">
+      <option value="personel">Personel (@bogazici.edu.tr)</option>
+      <option value="student">Öğrenci (@std.bogazici.edu.tr)</option>
+      <option value="pt">Yarızamanlı (@pt.bogazici.edu.tr)</option>
+      <option value="emekli">Emekli (@retired.bogazici.edu.tr)</option>
+    </select>
+    <div class="hint">The server is also remembered automatically each time you log in.</div>
+  </div>
+
+  <div class="row">
+    <label><input type="checkbox" id="autoSubmit"> Auto-submit after Chrome autofills credentials</label>
+    <div class="hint">Only triggers if both username and password are filled within 3 seconds of page load.</div>
+  </div>
+
+  <div class="saved" id="saved"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
