@@ -1,2 +1,2 @@
-# bumail_auto_selector
+# Bumail Auto Selector
 Automatic Mail Type Selector For Boğaziçi University Email Login Page
